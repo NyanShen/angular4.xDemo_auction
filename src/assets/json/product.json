@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": "001",
+      "name": "第一个商品",
+      "price": "899",
+      "rating": "3.5",
+      "desc": "苹果手机",
+      "category": "电子产品"
+    },
+    {
+      "id": "002",
+      "name": "第二个商品",
+      "price": "899",
+      "rating": "4",
+      "desc": "联想电脑",
+      "category": "电子产品"
+    },
+    {
+      "id": "003",
+      "name": "第三个商品",
+      "price": "899",
+      "rating": "4",
+      "desc": "平板电脑",
+      "category": "电子产品"
+    },
+    {
+      "id": "004",
+      "name": "第四个商品",
+      "price": "899",
+      "rating": "3.5",
+      "desc": "洗衣机",
+      "category": "家电"
+    },
+    {
+      "id": "005",
+      "name": "第五个商品",
+      "price": "899",
+      "rating": "2.5",
+      "desc": "电饭煲",
+      "category": "家电"
+    },
+    {
+      "id": "006",
+      "name": "第六个商品",
+      "price": "899",
+      "rating": "2.5",
+      "desc": "电视机",
+      "category": "家电"
+    }
+  ]
+}

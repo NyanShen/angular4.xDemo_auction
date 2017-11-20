@@ -1,0 +1,35 @@
+<div class="user-list">
+  <table class="table table-hover table-operator">
+    <thead class="table-header">
+    <tr>
+      <th>用户号</th>
+
+      <th>用户名</th>
+
+      <th>用户组</th>
+
+      <th>用户描述</th>
+
+      <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.username}}</td>
+      <td>{{user.fullName}}</td>
+      <td>{{user.group}}</td>
+      <td>{{user.desc}}</td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="user-pagination">
+    <ul class="pagination">
+      <li><a href="#">&laquo;</a></li>
+      <li class="active"><a href="#">1</a></li>
+      <li><a href="#">&raquo;</a></li>
+    </ul>
+  </div>
+
+</div>

@@ -1,0 +1,11 @@
+.login-container .main-box {
+  margin-top: 100px;
+}
+
+.login-container  .main-box .panel-title {
+  text-align: center;
+}
+.login-container .login-btn{
+  float: right;
+  margin-right: 1px;
+}

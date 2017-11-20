@@ -1,0 +1,83 @@
+{
+  "menus": [
+    {
+      "id": "0010",
+      "fatherId": "0000",
+      "name": "sell",
+      "path": "/auction/sell",
+      "childItems": [
+        {
+          "id": "0011",
+          "fatherId": "0010",
+          "name": "竞拍商品",
+          "path": "/auction/sell/product-list",
+          "childItems": []
+        },
+        {
+          "id": "0012",
+          "fatherId": "0010",
+          "name": "成交商品",
+          "path": "/auction/sell/product-success",
+          "childItems": []
+        },
+        {
+          "id": "0013",
+          "fatherId": "0010",
+          "name": "新增商品",
+          "path": "/auction/sell/product-add",
+          "childItems": []
+        },
+        {
+          "id": "0014",
+          "fatherId": "0010",
+          "name": "最新商品",
+          "path": "/auction/sell/product-latest",
+          "childItems": []
+        }
+      ]
+    },
+    {
+      "id": "0020",
+      "fatherId": "0000",
+      "name": "backstage",
+      "path": "/auction/backstage",
+      "childItems": [
+        {
+          "id": "0021",
+          "fatherId": "0020",
+          "name": "用户管理",
+          "path": "/auction/backstage/user-manage",
+          "childItems": []
+        },
+        {
+          "id": "0022",
+          "fatherId": "0020",
+          "name": "角色管理",
+          "path": "/auction/backstage/role-manage",
+          "childItems": []
+        },
+        {
+          "id": "0023",
+          "fatherId": "0020",
+          "name": "页面管理",
+          "path": "/auction/backstage/page-manage",
+          "childItems": []
+        },
+        {
+          "id": "0024",
+          "fatherId": "0010",
+          "name": "用户角色",
+          "path": "/auction/backstage/user-role",
+          "childItems": []
+        },
+        {
+          "id": "0025",
+          "fatherId": "0010",
+          "name": "模块管理",
+          "path": "/auction/backstage/module-manage",
+          "childItems": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<aside class="side-bar">
+
+  <ul class="list-unstyled menu">
+    <li class="nav-item" *ngFor="let item of menus"
+        [ngClass]="{'is-open':!!item.isOpen,'active':!!item.active}">
+      <span class="item-name nav-item-content"
+            (click)="setActiveNavItem(item)">
+        <i class="fa {{!!item.isOpen ? 'fa-toggle-down' : 'fa-toggle-right'}}"
+           *ngIf="hasChildItem(item)"></i>
+        {{item.name}}
+      </span>
+
+      <ul class="list-unstyled sub-menu">
+        <li class="child-nav-item" *ngFor="let childItem of item.childItems"
+            [ngClass]="{'active':!!childItem.active}"
+            (click)="setActiveChildNavItem(childItem)">
+          <a class="item-name" (click)="setActiveNavItem(childItem)">{{childItem.name}}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+</aside>

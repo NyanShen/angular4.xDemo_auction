@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": "user_id_01",
+      "username": "user_name_01",
+      "fullName": "full_name_01",
+      "password": "password_01",
+      "group": "0",
+      "desc": "系统管理员权限"
+    },
+    {
+      "id": "user_id_02",
+      "username": "user_name_02",
+      "fullName": "full_name_02",
+      "password": "password_02",
+      "group": "0",
+      "desc": "系统管理员权限"
+    },
+    {
+      "id": "user_id_03",
+      "username": "user_name_03",
+      "fullName": "full_name_03",
+      "password": "password_03",
+      "group": "0",
+      "desc": "系统管理员权限"
+    },
+    {
+      "id": "user_id_04",
+      "username": "user_name_04",
+      "fullName": "full_name_04",
+      "password": "password_04",
+      "group": "1",
+      "desc": "业务操作员权限"
+    },
+    {
+      "id": "user_id_05",
+      "username": "user_name_05",
+      "fullName": "full_name_05",
+      "password": "password_05",
+      "group": "1",
+      "desc": "业务操作员权限"
+    }
+  ]
+}
