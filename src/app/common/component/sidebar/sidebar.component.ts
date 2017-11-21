@@ -28,7 +28,7 @@ export class SidebarComponent implements OnInit {
     });
     this.currentPath = this.platFormLocation.pathname;
 
-    this.http.get('assets/json/menus.json')
+    this.http.get('/api/menus')
       .subscribe(data => {
         const menuTree = data['menus'];
         _.set(this.menus, menuTree[1].name, menuTree[1].childItems);
