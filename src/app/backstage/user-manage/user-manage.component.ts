@@ -14,9 +14,8 @@ export class UserManageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.http.get('assets/json/user.json')
-      .subscribe(data => {
-        this.users = data['users'];
+    this.http.get('/api/users').subscribe(users => {
+        this.users = users['users'];
       });
   }
 
