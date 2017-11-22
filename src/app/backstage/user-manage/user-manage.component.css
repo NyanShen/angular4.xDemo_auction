@@ -1,6 +1,9 @@
 .user-list .table-header {
   background-color: #f4f4f4;
 }
+.user-list .dropdown-menu{
+  min-width: 80px;
+}
 .user-pagination {
   text-align: center;
 }
