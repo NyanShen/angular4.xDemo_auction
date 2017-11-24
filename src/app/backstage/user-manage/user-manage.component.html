@@ -1,4 +1,20 @@
 <div class="user-list">
+  <div class="control-group">
+    <label class="control-label">用户号</label>
+    <input type="text" class="form-control" maxlength="20"
+           name="userName" [(ngModel)]="userName">
+  </div>
+  <div class="control-group">
+    <label class="control-label">用户名</label>
+    <input type="text" class="form-control" maxlength="20"
+           name="fullName" [(ngModel)]="fullName">
+  </div>
+  <div class="control-group">
+    <button class="btn btn-primary" (click)="search()">查询</button>
+  </div>
+  <div class="control-group">
+    <button class="btn btn-primary" (click)="reset()">重置</button>
+  </div>
   <table class="table table-hover with-operation">
     <thead class="table-header">
     <tr>
