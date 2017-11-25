@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-user-modify',
@@ -13,10 +13,11 @@ export class UserModifyComponent implements OnInit {
   subMenu = '用户管理';
   button = '用户修改';
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {
+    this.activatedRoute.data.subscribe((data) => this.model = data.user);
   }
 
   cancel() {

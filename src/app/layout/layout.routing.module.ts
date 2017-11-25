@@ -10,6 +10,7 @@ import {UserManageComponent} from '../backstage/user-manage/user-manage.componen
 import {UserModifyComponent} from '../backstage/user-manage/user-modify/user-modify.component';
 import {UserAddComponent} from '../backstage/user-add/user-add.component';
 import {AuthGuardService} from '../common/service/util/auth.guard.service';
+import {UserResolve} from "../common/service/user.resolve";
 
 const routes: Routes = [
   {
@@ -32,7 +33,7 @@ const routes: Routes = [
           }
         ]
       },
-      {path: 'users/:id', component: UserModifyComponent},
+      {path: 'users/:id', component: UserModifyComponent, resolve: {user: UserResolve}},
       {path: 'forbidden', component: Code403Component},
       {path: '**', component: Code404Component}
     ]
@@ -42,6 +43,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
+  providers: [UserResolve]
 })
 
 export class LayoutRoutingModule {
