@@ -7,6 +7,7 @@ import {Code403Component} from './code403/code403.component';
 import {Code404Component} from './code404/code404.component';
 import {BackstageComponent} from '../backstage/backstage.component';
 import {UserManageComponent} from '../backstage/user-manage/user-manage.component';
+import {UserModifyComponent} from '../backstage/user-manage/user-modify/user-modify.component';
 import {UserAddComponent} from '../backstage/user-add/user-add.component';
 import {AuthGuardService} from '../common/service/util/auth.guard.service';
 
@@ -31,6 +32,7 @@ const routes: Routes = [
           }
         ]
       },
+      {path: 'users/:id', component: UserModifyComponent},
       {path: 'forbidden', component: Code403Component},
       {path: '**', component: Code404Component}
     ]

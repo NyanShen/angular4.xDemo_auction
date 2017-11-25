@@ -9,6 +9,8 @@ import {FormsModule} from '@angular/forms';
 import {BootstrapModalModule} from 'ngx-bootstrap-modal';
 import {NavigationComponent} from '../common/component/navigation/navigation.component';
 import { UserAddComponent } from './user-add/user-add.component';
+import { UserModifyComponent } from './user-manage/user-modify/user-modify.component';
+import {UserService} from '../common/service/user.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { UserAddComponent } from './user-add/user-add.component';
     UserManageComponent,
     SidebarComponent,
     NavigationComponent,
-    UserAddComponent
+    UserAddComponent,
+    UserModifyComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,7 @@ import { UserAddComponent } from './user-add/user-add.component';
     LayoutRoutingModule,
     BootstrapModalModule.forRoot({container: document.body})
   ],
-  providers: [SidebarService],
+  providers: [SidebarService, UserService],
   bootstrap: []
 })
 export class BackstageModule {

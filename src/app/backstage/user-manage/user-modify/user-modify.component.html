@@ -1,0 +1,55 @@
+<div class="container auction-backstage">
+  <div class="row">
+    <div class="col-md-12 user-navigation">
+      <app-navigation [menu]="menu" [subMenu]="subMenu" [button]="button"></app-navigation>
+    </div>
+    <div class="col-md-12 panel panel-default">
+      <div class="user-modify">
+        <header class="user-title">修改用户信息</header>
+        <form class="form-horizontal" #userForm="ngForm">
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">用户ID</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" disabled name="userId" [(ngModel)]="model.id">
+            </div>
+            <label class="col-sm-2 control-label">用户密码</label>
+            <div class="col-sm-4">
+              <input type="password" class="form-control" name="password" [(ngModel)]="model.password">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">用户编号</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" disabled name="userName" [(ngModel)]="model.userName">
+            </div>
+            <label class="col-sm-2 control-label">用户名称</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" name="fullName" [(ngModel)]="model.fullName">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">用户组别</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" name="group" [(ngModel)]="model.group">
+            </div>
+            <label class="col-sm-2 control-label">用户描述</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" name="userDesc" [(ngModel)]="model.desc">
+            </div>
+          </div>
+
+          <div class="user-button">
+            <input type="button" class="btn btn-primary" value="提交"
+                   (click)="onSubmit()"
+                   [disabled]="userForm.form.inValid">
+            <input type="button" class="btn btn-primary" value="取消" (click)="cancel()">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

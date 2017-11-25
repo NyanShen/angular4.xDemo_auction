@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import {DialogService} from 'ngx-bootstrap-modal';
+import {Router} from '@angular/router';
+import {UserService} from '../../common/service/user.service';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
-import * as _ from 'lodash';
 
 @Component({
   selector: 'app-user-manage',
@@ -18,23 +18,20 @@ export class UserManageComponent implements OnInit {
   fullName = '';
   users$: Observable<any>;
 
-  constructor(private http: HttpClient, public dialogService: DialogService) {
+  constructor(private userService: UserService,
+              private dialogService: DialogService,
+              private router: Router) {
   }
 
   ngOnInit() {
-    this.http.get('/api/users').subscribe(users => {
-      this.users = users['users'];
-    });
+    this.search();
   }
 
   search() {
-    const params = new HttpParams()
-      .set('userName', this.userName)
-      .set('fullName', this.fullName);
-    this.http.get('/api/users', {params})
-      .subscribe(data => {
-        this.users = data['users'];
-      });
+    this.users$ = this.userService.queryUsers(this.userName, this.fullName);
+    this.users$.subscribe((data) => {
+      this.users = data['users'];
+    });
   }
 
   reset() {
@@ -55,13 +52,16 @@ export class UserManageComponent implements OnInit {
   }
 
   deleteUser(user) {
-    const url = '/api/users/' + user.id;
     this.dialogService.confirm('提示', '确认要删除吗？')
       .then((result: boolean) => {
         if (result) {
-          this.http.delete(url).subscribe();
+          this.userService.deleteUser(user.id).subscribe();
           this.search();
         }
       });
+  }
+
+  modifyUser(user) {
+    this.router.navigate(['/auction/users', user.id]);
   }
 }

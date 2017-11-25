@@ -1,0 +1,16 @@
+.user-title {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px 20px;
+}
+.user-button {
+  text-align: center;
+  margin: 20px 20px;
+}
+
+.user-button .btn-primary{
+  margin-right: 15px;
+}
+.user-navigation {
+  height: 65px;
+}
