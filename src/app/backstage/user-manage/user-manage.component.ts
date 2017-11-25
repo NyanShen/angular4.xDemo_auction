@@ -29,18 +29,20 @@ export class UserManageComponent implements OnInit {
 
   search() {
     const params = new HttpParams()
-    .set('userName', this.userName)
-    .set('fullName', this.fullName);
+      .set('userName', this.userName)
+      .set('fullName', this.fullName);
     this.http.get('/api/users', {params})
       .subscribe(data => {
         this.users = data['users'];
       });
   }
+
   reset() {
     this.userName = '';
     this.fullName = '';
     this.search();
   }
+
   detail() {
     this.dialogService.show(
       {
@@ -50,5 +52,16 @@ export class UserManageComponent implements OnInit {
         showCancelButton: false
       }
     );
+  }
+
+  deleteUser(user) {
+    const url = '/api/users/' + user.id;
+    this.dialogService.confirm('提示', '确认要删除吗？')
+      .then((result: boolean) => {
+        if (result) {
+          this.http.delete(url).subscribe();
+          this.search();
+        }
+      });
   }
 }
