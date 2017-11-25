@@ -1,5 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do';
+
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-user-manage',
@@ -9,15 +14,31 @@ import {HttpClient} from '@angular/common/http';
 export class UserManageComponent implements OnInit {
 
   users = [];
+  userName = '';
+  fullName = '';
+  users$: Observable<any>;
 
   constructor(private http: HttpClient) {
   }
 
   ngOnInit() {
-    this.http.get('assets/json/user.json')
+    this.http.get('/api/users').subscribe(users => {
+      this.users = users['users'];
+    });
+  }
+
+  search() {
+    const params = new HttpParams()
+    .set('userName', this.userName)
+    .set('fullName', this.fullName);
+    this.http.get('/api/users', {params})
       .subscribe(data => {
         this.users = data['users'];
       });
   }
-
+  reset() {
+    this.userName = '';
+    this.fullName = '';
+    this.search();
+  }
 }
