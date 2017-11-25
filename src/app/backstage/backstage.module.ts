@@ -7,12 +7,16 @@ import {SidebarService} from '../common/component/sidebar/sidebar.service';
 import {LayoutRoutingModule} from '../layout/layout.routing.module';
 import {FormsModule} from '@angular/forms';
 import {BootstrapModalModule} from 'ngx-bootstrap-modal';
+import {NavigationComponent} from '../common/component/navigation/navigation.component';
+import { UserAddComponent } from './user-add/user-add.component';
 
 @NgModule({
   declarations: [
     BackstageComponent,
     UserManageComponent,
-    SidebarComponent
+    SidebarComponent,
+    NavigationComponent,
+    UserAddComponent
   ],
   imports: [
     BrowserModule,

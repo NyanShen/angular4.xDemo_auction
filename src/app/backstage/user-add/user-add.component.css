@@ -1,0 +1,12 @@
+.user-title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.user-button {
+  text-align: center;
+}
+
+.user-button .btn-primary{
+  margin-right: 15px;
+}

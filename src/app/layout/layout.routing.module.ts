@@ -7,6 +7,7 @@ import {Code403Component} from './code403/code403.component';
 import {Code404Component} from './code404/code404.component';
 import {BackstageComponent} from '../backstage/backstage.component';
 import {UserManageComponent} from '../backstage/user-manage/user-manage.component';
+import {UserAddComponent} from '../backstage/user-add/user-add.component';
 import {AuthGuardService} from '../common/service/util/auth.guard.service';
 
 const routes: Routes = [
@@ -21,6 +22,11 @@ const routes: Routes = [
           {
             path: 'user-manage',
             component: UserManageComponent,
+            canActivate: [AuthGuardService]
+          },
+          {
+            path: 'user-add',
+            component: UserAddComponent,
             canActivate: [AuthGuardService]
           }
         ]

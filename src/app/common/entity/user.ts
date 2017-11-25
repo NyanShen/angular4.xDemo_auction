@@ -1,8 +1,11 @@
 export class User {
   id: string;
-  username: string;
+  userName: string;
   fullName: string;
   password: string;
   group: string;
   desc: string;
+
+  constructor() {
+  }
 }
