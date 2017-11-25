@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
+import {DialogService} from 'ngx-bootstrap-modal';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
-
 import * as _ from 'lodash';
 
 @Component({
@@ -18,7 +18,7 @@ export class UserManageComponent implements OnInit {
   fullName = '';
   users$: Observable<any>;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, public dialogService: DialogService) {
   }
 
   ngOnInit() {
@@ -40,5 +40,15 @@ export class UserManageComponent implements OnInit {
     this.userName = '';
     this.fullName = '';
     this.search();
+  }
+  detail() {
+    this.dialogService.show(
+      {
+        content: '保存成功',
+        icon: 'success',
+        size: 'sm',
+        showCancelButton: false
+      }
+    );
   }
 }

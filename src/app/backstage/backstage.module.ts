@@ -6,6 +6,7 @@ import {SidebarComponent} from '../common/component/sidebar/sidebar.component';
 import {SidebarService} from '../common/component/sidebar/sidebar.service';
 import {LayoutRoutingModule} from '../layout/layout.routing.module';
 import {FormsModule} from '@angular/forms';
+import {BootstrapModalModule} from 'ngx-bootstrap-modal';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {FormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-    LayoutRoutingModule
+    LayoutRoutingModule,
+    BootstrapModalModule.forRoot({container: document.body})
   ],
   providers: [SidebarService],
   bootstrap: []
