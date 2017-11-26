@@ -8,9 +8,9 @@ import {LayoutRoutingModule} from '../layout/layout.routing.module';
 import {FormsModule} from '@angular/forms';
 import {BootstrapModalModule} from 'ngx-bootstrap-modal';
 import {NavigationComponent} from '../common/component/navigation/navigation.component';
-import { UserAddComponent } from './user-add/user-add.component';
-import { UserModifyComponent } from './user-manage/user-modify/user-modify.component';
-import {UserService} from '../common/service/user.service';
+import {UserAddComponent} from './user-add/user-add.component';
+import {UserModifyComponent} from './user-manage/user-modify/user-modify.component';
+import {UserService} from './user-manage/user.service';
 
 @NgModule({
   declarations: [

@@ -10,7 +10,7 @@ import {UserManageComponent} from '../backstage/user-manage/user-manage.componen
 import {UserModifyComponent} from '../backstage/user-manage/user-modify/user-modify.component';
 import {UserAddComponent} from '../backstage/user-add/user-add.component';
 import {AuthGuardService} from '../common/service/util/auth.guard.service';
-import {UserResolve} from "../common/service/user.resolve";
+import {UserResolve} from "../backstage/user-manage/user.resolve";
 
 const routes: Routes = [
   {

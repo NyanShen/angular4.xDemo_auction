@@ -24,4 +24,14 @@ export class UserService {
     const url = '/api/users/' + id;
     return this.http.delete(url);
   }
+
+  addUser(user): Observable<any> {
+    const url = '/api/users';
+    return this.http.post(url, {user: user});
+  }
+
+  modifyUser(user): Observable<any> {
+    const url = '/api/users/' + user.id;
+    return this.http.patch(url, {user: user});
+  }
 }

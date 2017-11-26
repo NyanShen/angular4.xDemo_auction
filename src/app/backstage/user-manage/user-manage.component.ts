@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {DialogService} from 'ngx-bootstrap-modal';
 import {Router} from '@angular/router';
-import {UserService} from '../../common/service/user.service';
+import {UserService} from './user.service';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 

@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {User} from '../../common/entity/user';
 import {DialogService} from 'ngx-bootstrap-modal';
 import {BuildOptions} from '@angular/cli/models/build-options';
 import {Router} from '@angular/router';
-import {HttpClient} from '@angular/common/http';
+import {User} from '../../common/entity/user';
+import {UserService} from '../user-manage/user.service';
 
 @Component({
   selector: 'app-user-add',
@@ -16,7 +16,7 @@ export class UserAddComponent implements OnInit {
 
   constructor(private dialogService: DialogService,
               private router: Router,
-              private http: HttpClient) {
+              private userService: UserService) {
   }
 
   ngOnInit() {
@@ -30,10 +30,9 @@ export class UserAddComponent implements OnInit {
       showCancelButton: false
     });
     const user = this.model;
-    this.http.post('/api/users', {user: user})
-      .subscribe();
+    this.userService.addUser(user).subscribe();
     this.reset();
-    // this.router.navigate(['/auction/backstage/user-manage']);
+    this.router.navigate(['/auction/backstage/user-manage']);
   }
 
   reset() {
