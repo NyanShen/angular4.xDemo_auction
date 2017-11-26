@@ -5,6 +5,7 @@ import {Router} from '@angular/router';
 import {UserService} from './user.service';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
+import {UserDetailModalComponent} from "./user-detail-modal/user-detail-modal.component";
 
 @Component({
   selector: 'app-user-manage',
@@ -40,15 +41,9 @@ export class UserManageComponent implements OnInit {
     this.search();
   }
 
-  detail() {
-    this.dialogService.show(
-      {
-        content: '保存成功',
-        icon: 'success',
-        size: 'sm',
-        showCancelButton: false
-      }
-    );
+  detail(user) {
+    this.dialogService.addDialog(UserDetailModalComponent,
+      {title: '用户信息详情', user: user}).subscribe();
   }
 
   deleteUser(user) {

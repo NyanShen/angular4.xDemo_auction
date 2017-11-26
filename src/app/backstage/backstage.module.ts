@@ -11,6 +11,7 @@ import {NavigationComponent} from '../common/component/navigation/navigation.com
 import {UserAddComponent} from './user-add/user-add.component';
 import {UserModifyComponent} from './user-manage/user-modify/user-modify.component';
 import {UserService} from './user-manage/user.service';
+import {UserDetailModalComponent} from './user-manage/user-detail-modal/user-detail-modal.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {UserService} from './user-manage/user.service';
     SidebarComponent,
     NavigationComponent,
     UserAddComponent,
-    UserModifyComponent
+    UserModifyComponent,
+    UserDetailModalComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,7 @@ import {UserService} from './user-manage/user.service';
     LayoutRoutingModule,
     BootstrapModalModule.forRoot({container: document.body})
   ],
+  entryComponents: [UserDetailModalComponent],
   providers: [SidebarService, UserService],
   bootstrap: []
 })

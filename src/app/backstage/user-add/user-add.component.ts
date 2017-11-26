@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {DialogService} from 'ngx-bootstrap-modal';
 import {BuildOptions} from '@angular/cli/models/build-options';
 import {Router} from '@angular/router';
-import {User} from '../../common/entity/user';
+import {User} from '../user-manage/user';
 import {UserService} from '../user-manage/user.service';
 
 @Component({
