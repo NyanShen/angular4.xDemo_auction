@@ -7,7 +7,22 @@
     </div>
 
     <div class="modal-body">
-      {{user.fullName}}
+      <table>
+        <tbody>
+        <tr>
+          <th>用户编号</th>
+          <td>{{user.userName}}</td>
+          <th>用户名称</th>
+          <td>{{user.fullName}}</td>
+        </tr>
+        <tr>
+          <th>用户组</th>
+          <td>{{user.group}}</td>
+          <th>用户描述</th>
+          <td>{{user.desc}}</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

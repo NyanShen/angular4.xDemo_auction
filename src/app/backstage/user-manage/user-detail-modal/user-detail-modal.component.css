@@ -1,0 +1,27 @@
+.modal-header {
+  position: relative;
+  margin-top: 20px;
+  padding: 0 10px;
+  height: 50px;
+  text-align: center;
+}
+
+.modal-header .modal-title {
+  display: inline-block;
+  font-size: 18px;
+}
+
+table th {
+  width: 100px;
+  padding-right: 20px;
+  font-weight: 400;
+  text-align: right;
+  border: 1px solid #eee;
+}
+table td {
+  width: 200px;
+  height: 30px;
+  padding-left: 30px;
+  text-align: left;
+  border: 1px solid #eee;
+}
