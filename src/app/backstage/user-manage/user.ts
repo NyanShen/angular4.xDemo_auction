@@ -1,5 +1,6 @@
 export class User {
   id: string;
+  tokenId: string;
   userName: string;
   fullName: string;
   password: string;

@@ -4,12 +4,12 @@ import {LoginComponent} from './login/login.component';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {LayoutComponent} from './layout.component';
-import {AuthenticationService} from './authentication.service';
+import {LoginService} from './login.service';
 import {LayoutRoutingModule} from './layout.routing.module';
 import {Code403Component} from './code403/code403.component';
 import {Code404Component} from './code404/code404.component';
 import {FormsModule} from '@angular/forms';
-import {AuthGuardService} from '../common/service/util/auth.guard.service';
+import {AuthGuardService} from '../common/service/auth-service/auth.guard.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import {AuthGuardService} from '../common/service/util/auth.guard.service';
     FormsModule,
     LayoutRoutingModule
   ],
-  providers: [AuthenticationService, AuthGuardService],
+  providers: [LoginService, AuthGuardService],
   bootstrap: []
 })
 export class LayoutModule {

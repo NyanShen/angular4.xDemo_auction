@@ -9,8 +9,8 @@ import {BackstageComponent} from '../backstage/backstage.component';
 import {UserManageComponent} from '../backstage/user-manage/user-manage.component';
 import {UserModifyComponent} from '../backstage/user-manage/user-modify/user-modify.component';
 import {UserAddComponent} from '../backstage/user-add/user-add.component';
-import {AuthGuardService} from '../common/service/util/auth.guard.service';
-import {UserResolve} from "../backstage/user-manage/user.resolve";
+import {AuthGuardService} from '../common/service/auth-service/auth.guard.service';
+import {UserResolve} from '../backstage/user-manage/user.resolve';
 
 const routes: Routes = [
   {

@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 
 @Injectable()
-export class AuthenticationService {
+export class LoginService {
 
   isLogin() {
     return localStorage.getItem('currentUser');

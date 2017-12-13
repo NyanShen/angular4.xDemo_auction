@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {AuthenticationService} from '../authentication.service';
+import {LoginService} from '../login.service';
 
 @Component({
   selector: 'app-login',
@@ -15,12 +15,12 @@ export class LoginComponent implements OnInit {
 
   constructor(private activeRoute: ActivatedRoute,
               private router: Router,
-              private authenticationService: AuthenticationService) {
+              private loginService: LoginService) {
   }
 
   ngOnInit() {
-    this.authenticationService.loginOut();
-    if (this.authenticationService.login(this.model.username, this.model.password)) {
+    this.loginService.loginOut();
+    if (this.loginService.login(this.model.username, this.model.password)) {
       this.router.navigate([this.returnUrl]);
     } else {
       this.loading = false;
@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    const isLogin = this.authenticationService.login(this.model.username, this.model.password);
+    const isLogin = this.loginService.login(this.model.username, this.model.password);
     if (isLogin) {
       this.router.navigate(['/auction/home']);
     }
