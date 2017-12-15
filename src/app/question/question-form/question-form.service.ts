@@ -32,6 +32,7 @@ export class QuestionFromService {
         key: 'emailAddress',
         label: 'Email',
         type: 'email',
+        required: false,
         order: 2
       })
     ];

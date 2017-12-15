@@ -9,12 +9,13 @@ import {FormGroup} from '@angular/forms';
 })
 export class DynamicFormComponent implements OnInit {
 
-  @Input() question: FormItemBase<any>;
+  @Input() formItem: FormItemBase<any>;
   @Input() form: FormGroup;
 
   constructor() { }
 
   ngOnInit() {
   }
+  get isValid() { return this.form.controls[this.formItem.key].valid; }
 
 }
