@@ -11,6 +11,7 @@ import {UserModifyComponent} from '../backstage/user-manage/user-modify/user-mod
 import {UserAddComponent} from '../backstage/user-add/user-add.component';
 import {AuthGuardService} from '../common/service/auth-service/auth.guard.service';
 import {UserResolve} from '../backstage/user-manage/user.resolve';
+import {QuestionComponent} from '../question/question.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
     children: [
       {path: 'home', component: HomeComponent},
       {path: 'login', component: LoginComponent},
+      {path: 'question', component: QuestionComponent},
       {
         path: 'backstage', component: BackstageComponent,
         children: [
