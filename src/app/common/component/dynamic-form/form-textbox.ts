@@ -1,7 +1,7 @@
 import {FormItemBase} from './form-item-base';
 
-export class FormTextbox extends FormItemBase<string> {
-  controlType = 'textbox';
+export class FormTextBox extends FormItemBase<string> {
+  controlType = 'textBox';
   type: string;
 
   constructor(options: {} = {}) {

@@ -1,7 +1,7 @@
 import {FormItemBase} from './form-item-base';
 
-export class FormDropdown extends FormItemBase<string> {
-  controlType = 'dropdown';
+export class FormDropDown extends FormItemBase<string> {
+  controlType = 'dropDown';
   options: {key: string, value: string}[] = [];
 
   constructor(options: {} = {}) {
