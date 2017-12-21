@@ -3,7 +3,7 @@ import {FormItemBase} from '../common/component/dynamic-form/form-item-base';
 import {FormDropDown} from '../common/component/dynamic-form/form-dropdown';
 import {FormTextBox} from '../common/component/dynamic-form/form-textbox';
 import {FormRadio} from '../common/component/dynamic-form/form-radio';
-import {FormCheck} from "../common/component/dynamic-form/form-check";
+import {FormCheck} from '../common/component/dynamic-form/form-check';
 
 @Injectable()
 export class QuestionFromService {
@@ -25,7 +25,6 @@ export class QuestionFromService {
       new FormTextBox({
         key: 'firstName',
         label: 'First name',
-        value: 'Bombasto',
         maxLength: 20,
         required: true,
         order: 1

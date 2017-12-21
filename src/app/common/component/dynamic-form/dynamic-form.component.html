@@ -23,5 +23,9 @@
 
   </div>
 
-  <div class="errorMessage" *ngIf="!isValid">{{formItem.label}} is required</div>
+  <!--<div class="errorMessage" *ngIf="!isValid && form.get(formItem.key).touched">{{formItem.label}} is required</div>-->
+  <div class="errorMessage"
+       *ngIf="form.get(formItem.key).hasError('required') && form.get(formItem.key).touched">
+    {{formItem.label}} is required
+  </div>
 </div>
