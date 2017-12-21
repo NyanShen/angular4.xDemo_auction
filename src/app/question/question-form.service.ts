@@ -26,6 +26,7 @@ export class QuestionFromService {
         key: 'firstName',
         label: 'First name',
         value: 'Bombasto',
+        maxLength: 20,
         required: true,
         order: 1
       }),

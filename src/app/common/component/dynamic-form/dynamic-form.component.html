@@ -3,7 +3,7 @@
   <div [ngSwitch]="formItem.controlType">
 
     <input *ngSwitchCase="'textBox'" [formControlName]="formItem.key"
-           [id]="formItem.key" [type]="formItem.type">
+           [id]="formItem.key" [type]="formItem.type" maxlength="{{formItem.maxLength}}">
 
     <select [id]="formItem.key" *ngSwitchCase="'dropDown'" [formControlName]="formItem.key">
       <option *ngFor="let opt of formItem.options" [value]="opt.key">{{opt.value}}</option>
